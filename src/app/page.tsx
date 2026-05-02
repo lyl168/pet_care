@@ -113,6 +113,12 @@ const hours = [
   ["节假日", "预约优先"]
 ];
 
+const storeAccess = [
+  ["步行", "静安寺地铁站 3 号口步行约 6 分钟"],
+  ["停车", "花园路地下车库可短停"],
+  ["到店", "临街 1F，橙色爪印门头"]
+];
+
 const arrivalTimes = [
   "09:30",
   "10:00",
@@ -379,28 +385,68 @@ export default function Home() {
 
         <section id="booking" className="px-6 py-[86px] max-sm:px-4 max-sm:py-16">
           <div className="mx-auto grid max-w-[1180px] grid-cols-[.9fr_1.1fr] items-start gap-[34px] max-[900px]:grid-cols-1">
-            <aside className="min-h-full rounded-lg bg-[var(--ink)] p-8 text-white max-sm:p-[22px]">
-              <p className="mb-2 text-sm font-extrabold text-[var(--coral-dark)]">
-                到店信息
-              </p>
-              <h2 className="m-0 text-[clamp(30px,4vw,48px)] font-extrabold leading-[1.14]">
-                今天就给毛孩子安排一次轻松洗护
-              </h2>
-              <p className="mt-6 text-[rgba(255,255,255,.78)]">
-                地址：上海市静安区花园路 88 号 1F
-                <br />
-                电话：021-6688-9527
-                <br />
-                微信：WarmPawsCare
-              </p>
-              <div className="mt-[26px] grid gap-3" aria-label="营业时间">
-                {hours.map(([day, time]) => (
+            <aside className="min-h-full overflow-hidden rounded-lg bg-[var(--ink)] text-white">
+              <div className="p-8 pb-6 max-sm:p-[22px] max-sm:pb-5">
+                <p className="mb-2 text-sm font-extrabold text-[var(--coral-dark)]">
+                  到店信息
+                </p>
+                <h2 className="m-0 text-[clamp(30px,4vw,48px)] font-extrabold leading-[1.14]">
+                  今天就给毛孩子安排一次轻松洗护
+                </h2>
+                <p className="mt-6 text-[rgba(255,255,255,.78)]">
+                  地址：上海市静安区花园路 88 号 1F
+                  <br />
+                  电话：021-6688-9527
+                  <br />
+                  微信：WarmPawsCare
+                </p>
+                <div className="mt-[26px] grid gap-3" aria-label="营业时间">
+                  {hours.map(([day, time]) => (
+                    <div
+                      className="flex justify-between gap-[18px] border-b border-[rgba(255,255,255,.16)] pb-3"
+                      key={day}
+                    >
+                      <span>{day}</span>
+                      <strong>{time}</strong>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <figure className="relative m-0 border-y border-[rgba(255,255,255,.14)] bg-[#f7f0df]">
+                <img
+                  className="aspect-[4/3] w-full object-cover"
+                  src="/assets/warm-paws-location-map.png"
+                  alt="AI 绘制的暖爪宠物洗护周边路线地图"
+                  loading="lazy"
+                />
+                <figcaption className="absolute left-5 top-5 rounded-lg bg-[rgba(33,49,42,.9)] px-4 py-3 text-sm shadow-[0_14px_30px_rgba(33,49,42,.26)] backdrop-blur max-sm:left-4 max-sm:top-4">
+                  <span className="block font-extrabold text-white">
+                    暖爪宠物洗护
+                  </span>
+                  <span className="text-[rgba(255,255,255,.72)]">
+                    花园路 88 号 1F
+                  </span>
+                </figcaption>
+                <div
+                  className="absolute bottom-4 right-4 inline-flex items-center gap-2 rounded-full bg-white px-3 py-2 text-sm font-extrabold text-[var(--coral-dark)] shadow-[0_12px_24px_rgba(33,49,42,.18)]"
+                  aria-hidden="true"
+                >
+                  <span className="grid h-6 w-6 place-items-center rounded-full bg-[var(--coral)] text-white">
+                    ♡
+                  </span>
+                  AI 绘制路线图
+                </div>
+              </figure>
+
+              <div className="grid gap-3 p-8 pt-6 max-sm:p-[22px] max-sm:pt-5">
+                {storeAccess.map(([label, detail]) => (
                   <div
-                    className="flex justify-between gap-[18px] border-b border-[rgba(255,255,255,.16)] pb-3"
-                    key={day}
+                    className="grid grid-cols-[56px_1fr] gap-3 rounded-lg border border-[rgba(255,255,255,.14)] bg-[rgba(255,255,255,.06)] p-3"
+                    key={label}
                   >
-                    <span>{day}</span>
-                    <strong>{time}</strong>
+                    <strong className="text-[var(--sun)]">{label}</strong>
+                    <span className="text-[rgba(255,255,255,.78)]">{detail}</span>
                   </div>
                 ))}
               </div>
