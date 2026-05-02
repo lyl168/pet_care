@@ -1,30 +1,15 @@
 <claude-mem-context>
 # Memory Context
 
-# [pet_care] recent context, 2026-05-03 12:56am GMT+8
+# [pet_care] recent context, 2026-05-03 1:06am GMT+8
 
 Legend: 🎯session 🔴bugfix 🟣feature 🔄refactor ✅change 🔵discovery ⚖️decision 🚨security_alert 🔐security_note
 Format: ID TIME TYPE TITLE
 Fetch details: get_observations([IDs]) | Search: mem-search skill
 
-Stats: 50 obs (11,469t read) | 0t work
+Stats: 50 obs (11,208t read) | 0t work
 
 ### May 2, 2026
-65 11:40p 🔵 Project is not under Git version control
-66 11:41p 🔵 Local Node toolchain supports Next.js migration
-67 " ✅ Next.js application directories created
-68 " ✅ Care-step images copied into Next.js public assets
-69 11:43p ✅ Next.js TypeScript project configuration added
-70 " 🟣 Static HTML landing page migrated into Next.js App Router
-71 " 🔵 npm install hung without output
-72 11:46p 🔵 Process inspection blocked while npm install was still running
-73 11:47p 🔵 npm install continued hanging after extended wait
-74 " 🔵 pkill could not terminate hanging npm install
-75 11:49p 🔵 npm install remained stuck after several minutes
-76 " 🔵 Dependency install left no root install artifacts
-77 11:50p 🔵 Escalated npm install also hung initially
-78 " ✅ Next.js dependencies installed successfully
-79 " 🔵 Original npm install session still running after successful reinstall
 80 11:51p 🔵 Next.js build failed due to Turbopack sandbox restriction
 81 " ✅ Configured explicit Turbopack project root
 82 " 🔴 Next.js production build now succeeds
@@ -61,4 +46,19 @@ Stats: 50 obs (11,469t read) | 0t work
 112 12:47a 🔴 Restarted Next.js dev server for browser access
 113 " 🔵 Local website reachability confirmed
 114 12:52a 🔵 GitHub connector was suggested but not installed
+115 12:56a 🔵 GitHub target repository provided for pet_care
+116 " 🔵 GitHub remote still not configured after target URL was provided
+117 " ✅ Latest AGENTS.md content staged for GitHub submission
+118 " 🔵 Git config and remote setup blocked by .git/config permissions
+119 " ✅ Local Git username configured for pet_care
+120 12:57a ✅ Local Git email configured for pet_care
+121 " ✅ GitHub origin remote configured for pet_care
+122 " ✅ Initial pet_care commit created on main
+123 " 🔵 GitHub push failed due to missing HTTPS credentials
+124 " 🔵 No local SSH key directory available for GitHub push
+125 " 🔵 SSH authentication to GitHub is unavailable
+126 1:02a 🔵 GitHub CLI login cannot run because gh is not installed
+127 1:05a ✅ Pet care project initialized as Git repository
+128 " ✅ Git ignore rules expanded for Next.js project hygiene
+129 " 🔵 GitHub push blocked by missing local authentication
 </claude-mem-context>
