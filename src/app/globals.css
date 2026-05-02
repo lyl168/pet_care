@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #21312a;
+  --muted: #65716b;
+  --line: #dbe4dd;
+  --paper: #fbfaf6;
+  --mint: #d9efe2;
+  --mint-deep: #5b9476;
+  --coral: #e98265;
+  --coral-dark: #b9513e;
+  --sun: #f2c66d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.hero-secondary-button {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  min-width: 112px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+  color: #21312a;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
