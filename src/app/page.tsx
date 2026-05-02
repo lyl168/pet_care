@@ -59,15 +59,51 @@ const careSteps = [
 const reviews = [
   {
     title: "“洗完像换了一只”",
+    name: "林小姐 · 比熊",
+    tag: "美容修剪",
     body: "我家比熊容易打结，美容师很耐心，修完圆圆的，回家也没有紧张。"
   },
   {
     title: "“猫咪洗护很稳”",
+    name: "周先生 · 布偶猫",
+    tag: "猫咪洗护",
     body: "提前沟通了猫咪胆小的问题，全程没有强迫，吹干也特别细致。"
   },
   {
     title: "“环境干净放心”",
+    name: "陈女士 · 柯基",
+    tag: "基础洗护",
     body: "能看到工具消毒和分区操作，预约时间也准，周末不用排队。"
+  },
+  {
+    title: "“会认真记住小习惯”",
+    name: "许小姐 · 银渐层",
+    tag: "低应激护理",
+    body: "第一次说了它怕吹脸，第二次美容师已经提前换了方式，猫咪状态明显放松。"
+  },
+  {
+    title: "“老年犬也照顾得细”",
+    name: "王先生 · 贵宾",
+    tag: "皮毛护理",
+    body: "我家狗年纪大站不久，店里会安排休息再继续，洗完毛顺了很多，也没有疲惫。"
+  },
+  {
+    title: "“泪痕清洁很温和”",
+    name: "赵小姐 · 马尔济斯",
+    tag: "耳眼清洁",
+    body: "之前很抗拒擦眼睛，这次美容师动作很轻，还教了回家护理方法，特别实用。"
+  },
+  {
+    title: "“大型犬也能洗得透”",
+    name: "刘先生 · 金毛",
+    tag: "深层洗护",
+    body: "金毛毛量大，以前总觉得底层没吹透，这次回家摸起来蓬松干爽，味道也清清淡淡。"
+  },
+  {
+    title: "“预约沟通很省心”",
+    name: "唐女士 · 泰迪",
+    tag: "造型复购",
+    body: "每次到店前都会确认时间和造型要求，修剪效果稳定，家里人都说这家最懂它。"
   }
 ];
 
@@ -303,23 +339,40 @@ export default function Home() {
               title="熟悉的美容师，稳定的护理体验"
               body="我们记录宠物的洗护习惯、敏感点和偏好，下一次到店可以更快进入状态。"
             />
-            <div className="grid grid-cols-3 gap-4 max-[900px]:grid-cols-1">
-              {reviews.map((review) => (
-                <article
-                  className="rounded-lg border border-[var(--line)] bg-white p-6"
-                  key={review.title}
-                >
-                  <div className="text-xl text-[var(--sun)]" aria-label="五星评价">
-                    ★★★★★
-                  </div>
-                  <h3 className="mb-2 mt-5 text-[21px] font-bold leading-[1.2]">
-                    {review.title}
-                  </h3>
-                  <p className="m-0 text-[15px] text-[var(--muted)]">
-                    {review.body}
-                  </p>
-                </article>
-              ))}
+            <div
+              className="review-carousel overflow-hidden"
+              aria-label="顾客评价轮播"
+            >
+              <div className="review-track flex w-max gap-4">
+                {[...reviews, ...reviews].map((review, index) => (
+                  <article
+                    className="review-card flex min-h-[254px] w-[360px] flex-col rounded-lg border border-[var(--line)] bg-white p-6 shadow-[0_14px_34px_rgba(42,61,51,.08)] max-sm:w-[calc(100vw-64px)] max-sm:min-h-[276px]"
+                    key={`${review.title}-${index}`}
+                    aria-hidden={index >= reviews.length ? "true" : undefined}
+                  >
+                    <div className="flex items-start justify-between gap-4">
+                      <div
+                        className="text-xl leading-none text-[var(--sun)]"
+                        aria-label="五星评价"
+                      >
+                        ★★★★★
+                      </div>
+                      <span className="rounded-full bg-[var(--mint)] px-3 py-1 text-xs font-extrabold text-[var(--mint-deep)]">
+                        {review.tag}
+                      </span>
+                    </div>
+                    <h3 className="mb-2 mt-5 text-[21px] font-bold leading-[1.2]">
+                      {review.title}
+                    </h3>
+                    <p className="m-0 flex-1 text-[15px] text-[var(--muted)]">
+                      {review.body}
+                    </p>
+                    <div className="mt-6 border-t border-[var(--line)] pt-4 text-sm font-extrabold text-[var(--ink)]">
+                      {review.name}
+                    </div>
+                  </article>
+                ))}
+              </div>
             </div>
           </div>
         </section>

@@ -57,3 +57,58 @@ textarea {
   line-height: 1;
   white-space: nowrap;
 }
+
+.review-carousel {
+  position: relative;
+  margin-inline: -24px;
+  padding: 6px 24px 18px;
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0,
+    #000 44px,
+    #000 calc(100% - 44px),
+    transparent 100%
+  );
+}
+
+.review-track {
+  animation: review-scroll 34s linear infinite;
+}
+
+.review-carousel:hover .review-track {
+  animation-play-state: paused;
+}
+
+.review-card {
+  transform: translateZ(0);
+}
+
+@keyframes review-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 8px));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .review-track {
+    animation: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .review-carousel {
+    margin-inline: -16px;
+    padding-inline: 16px;
+    mask-image: linear-gradient(
+      90deg,
+      transparent 0,
+      #000 22px,
+      #000 calc(100% - 22px),
+      transparent 100%
+    );
+  }
+}
