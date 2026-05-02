@@ -77,6 +77,32 @@ const hours = [
   ["节假日", "预约优先"]
 ];
 
+const arrivalTimes = [
+  "09:30",
+  "10:00",
+  "10:30",
+  "11:00",
+  "11:30",
+  "12:00",
+  "12:30",
+  "13:00",
+  "13:30",
+  "14:00",
+  "14:30",
+  "15:00",
+  "15:30",
+  "16:00",
+  "16:30",
+  "17:00",
+  "17:30",
+  "18:00",
+  "18:30",
+  "19:00",
+  "19:30",
+  "20:00",
+  "20:30"
+];
+
 const inputClass =
   "min-h-12 w-full rounded-lg border border-[var(--line)] bg-[#fbfaf6] px-[13px] py-3 text-[#21312a] outline-none transition focus:border-[var(--mint-deep)] focus:shadow-[0_0_0_3px_rgba(91,148,118,.16)]";
 
@@ -378,12 +404,17 @@ export default function Home() {
                 <FormLabel text="希望日期">
                   <input className={inputClass} name="date" type="date" required />
                 </FormLabel>
-                <FormLabel text="到店时段">
-                  <select className={inputClass} name="time" required defaultValue="">
-                    <option value="">请选择</option>
-                    <option>上午 10:00 - 12:00</option>
-                    <option>下午 13:00 - 17:00</option>
-                    <option>晚上 18:00 - 20:00</option>
+                <FormLabel text="期望到店时间">
+                  <select
+                    className={inputClass}
+                    name="arrivalTime"
+                    required
+                    defaultValue=""
+                  >
+                    <option value="">请选择时间</option>
+                    {arrivalTimes.map((time) => (
+                      <option key={time}>{time}</option>
+                    ))}
                   </select>
                 </FormLabel>
                 <FormLabel text="备注" className="col-span-full">

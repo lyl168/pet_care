@@ -1,64 +1,63 @@
 <claude-mem-context>
 # Memory Context
 
-# [pet_care] recent context, 2026-05-03 1:06am GMT+8
+# [pet_care] recent context, 2026-05-03 1:41am GMT+8
 
 Legend: 🎯session 🔴bugfix 🟣feature 🔄refactor ✅change 🔵discovery ⚖️decision 🚨security_alert 🔐security_note
 Format: ID TIME TYPE TITLE
 Fetch details: get_observations([IDs]) | Search: mem-search skill
 
-Stats: 50 obs (11,208t read) | 0t work
+Stats: 50 obs (10,331t read) | 0t work
 
-### May 2, 2026
-80 11:51p 🔵 Next.js build failed due to Turbopack sandbox restriction
-81 " ✅ Configured explicit Turbopack project root
-82 " 🔴 Next.js production build now succeeds
-83 " 🔵 ESLint flat config failed with circular React plugin structure
-84 " 🔵 Next ESLint package exposes flat config entrypoints
-85 11:52p 🔴 ESLint configuration now runs successfully
-86 " 🔴 ESLint warnings cleared
-87 " 🔴 Final production build passes after lint cleanup
-88 " 🟣 Next.js dev server runs successfully
-89 " 🔵 curl could not reach reported dev server
-90 11:53p 🔵 Dev server process remained running despite localhost curl failures
-91 " 🔴 Local dev server verified with escalated curl
-92 " 🔴 Public image asset verified through Next.js dev server
-93 " 🔵 Original hanging npm install still active late in session
-94 " 🔵 Process list shows only active Next.js dev server for pet_care
-95 " 🔵 Stale npm install harness session persists without OS process evidence
-109 11:54p 🔴 Restored local Next.js site availability
 ### May 3, 2026
-96 12:04a 🔵 pet_care project was not yet a Git repository
-97 " 🔵 Existing .gitignore already excludes common Next.js generated files
-98 12:05a ✅ .gitignore expanded for safer Git initialization
-99 " 🔵 .gitignore expansion patch did not apply
-100 " ✅ pet_care initialized as a Git repository
-101 " ✅ .gitignore expanded and verified for Next.js Git setup
-102 " 🔵 Git staging blocked by .git/index.lock permission error
-103 12:06a ✅ Initial pet_care files staged after elevated Git index access
-104 " ✅ Initial Git staging verified on main branch
-105 12:08a 🔵 AGENTS.md has unstaged changes after initial staging
-106 " 🔵 pet_care repository has no remote or commit identity configured
-107 " 🔵 Restaging AGENTS.md hit the same Git index permission blocker
-108 " ✅ AGENTS.md restaged with elevated Git index permission
-110 12:45a 🔵 Sandboxed localhost curl cannot reach dev server
-111 " 🔵 Project directory is now a Git repository
-112 12:47a 🔴 Restarted Next.js dev server for browser access
-113 " 🔵 Local website reachability confirmed
-114 12:52a 🔵 GitHub connector was suggested but not installed
-115 12:56a 🔵 GitHub target repository provided for pet_care
-116 " 🔵 GitHub remote still not configured after target URL was provided
-117 " ✅ Latest AGENTS.md content staged for GitHub submission
-118 " 🔵 Git config and remote setup blocked by .git/config permissions
-119 " ✅ Local Git username configured for pet_care
-120 12:57a ✅ Local Git email configured for pet_care
-121 " ✅ GitHub origin remote configured for pet_care
-122 " ✅ Initial pet_care commit created on main
-123 " 🔵 GitHub push failed due to missing HTTPS credentials
-124 " 🔵 No local SSH key directory available for GitHub push
-125 " 🔵 SSH authentication to GitHub is unavailable
-126 1:02a 🔵 GitHub CLI login cannot run because gh is not installed
 127 1:05a ✅ Pet care project initialized as Git repository
 128 " ✅ Git ignore rules expanded for Next.js project hygiene
 129 " 🔵 GitHub push blocked by missing local authentication
+130 1:07a 🔵 AGENTS.md has staged changes after initial Git commit
+131 " 🔵 AGENTS.md staged diff reduces file length
+132 " ✅ Repository Git identity changed to QQ email
+133 1:08a ✅ Project metadata update committed
+134 " 🔵 GitHub push still blocked by HTTPS credential prompt
+135 " 🔵 Local Git repository is clean with two commits
+136 1:09a 🔵 Repeated GitHub push attempt failed for missing HTTPS username
+137 1:15a ✅ GitHub push for pet_care main branch succeeded
+138 " 🔵 Remote main is synced but AGENTS.md has new local changes
+139 1:23a 🔵 Previous dev server session no longer exists
+140 1:24a 🔵 localhost:3000 confirmed offline when dev server is stopped
+141 " 🔴 Started Next.js dev server as detached background process
+142 " 🔵 nohup dev server was not immediately reachable
+143 " 🔵 Detached dev server log is empty
+144 1:25a 🔵 Detached dev server still produced no logs after delay
+145 " 🔵 Background dev server failed to bind localhost after waiting
+146 " 🔴 Started active-session Next.js dev server
+147 " 🔵 Active dev server reachability verified
+148 1:26a 🔵 Next.js project scripts and dependencies confirmed
+149 1:27a 🔵 Turbopack root is explicitly configured
+150 " 🔵 Local Node tooling paths identified
+151 " 🟣 Added launchd-based persistent local server setup
+152 " ✅ Made local server startup script executable
+153 " 🔵 Production build verified for persistent server
+154 " ✅ Stopped transient dev server before installing persistent service
+155 1:28a ✅ Prepared user LaunchAgents directory
+156 " ✅ Installed pet care LaunchAgent plist
+157 " 🔵 launchctl unload reported non-fatal I/O error
+158 1:29a ✅ Loaded pet care LaunchAgent service
+159 " 🔵 LaunchAgent-loaded service did not become reachable
+160 " 🔵 LaunchAgent failed because startup script was not openable
+161 " 🔵 Startup script exists despite launchd open failure
+162 1:30a 🔵 LaunchAgent diagnostics found valid plist and script provenance attribute
+163 " ✅ Changed LaunchAgent to inline the server command
+164 " ✅ Updated installed LaunchAgent with inline command
+165 " ✅ Booted out previous pet care LaunchAgent instance
+166 1:31a ✅ Bootstrapped fixed pet care LaunchAgent
+167 1:32a 🔴 Persistent LaunchAgent server reachability confirmed
+168 " 🔵 Persistent server logs confirm production startup
+169 " 🔵 LaunchAgent status confirms persistent service running
+170 1:37a 🔵 Booking form already has arrival time field references
+171 " 🔵 Pet care app is a minimal Next.js landing page
+172 " 🔵 Booking form currently uses broad arrival time slots
+173 " 🔵 Working tree has unrelated existing changes
+174 1:38a 🟣 Booking form now collects expected arrival time
+175 " 🔵 Arrival time booking change passes lint
+176 " 🔵 Diff confirms only booking time UI changed in app files
 </claude-mem-context>
